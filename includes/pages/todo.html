@@ -1,0 +1,20 @@
+<div class="row todoPage">
+	<div class="col-md-2"></div>
+	<div class="col-md-8 col-xs-12">
+		<h2>Add An Event To The Todo List</h2>
+		<div class="well">
+			<form ng-submit="addTodo()">
+				<input type="text" ng-model="title" class="titleInput" placeholder="Add Todo" required>
+				<button type="submit" class="btn btn-primary addBtn"><span class="glyphicon glyphicon-plus"></span></button><br>
+				<h3><strong>Tasks:</strong> {{tasks.length}} Added &nbsp;&nbsp;&nbsp;&nbsp;{{check}} Checked &nbsp;&nbsp;&nbsp;&nbsp;{{tasks.length - check}} Remaining.</h3>
+			</form>
+		</div>
+
+		<div class="alert alert-info" ng-repeat="task in tasks track by $index" id="alert{{this.$index}}">
+			<button class="close" ng-click="removeTodo()">&times;</button>
+		  	<input type="checkbox" ng-model="checked" ng-click="calcRemaining()">&nbsp;&nbsp;&nbsp;&nbsp;
+		  	<span class="todo-{{checked}}">{{task}}</span>
+		</div>
+	</div>
+	<div class="col-md-2"></div>
+</div>

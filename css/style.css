@@ -1,0 +1,145 @@
+
+body{
+	font-family:'century gothic', 'century gothic';
+  	overflow-y: auto;
+  	margin: 0px;
+  	padding: 0px;
+}
+.foot{
+	text-align: center;
+	color: #232323;
+	font-weight: bold;
+	background: #f5f5f5;
+	font-style: italic;
+	margin-bottom: -2px;
+}
+.navbar{
+	background: #232323;
+	border: 1px solid transparent;
+}
+.navbar *{
+	color: #fff !important;
+}
+.homePage{
+	margin-top: 50px;
+	height: auto;
+	background-image: url("../includes/images/computers.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	padding: 30px;
+	padding-bottom: 70px;
+}
+.well1{
+	opacity: 0.9;
+	background: transparent;
+	border: 1px solid transparent;
+	margin-top: 8%;
+	padding: 20px;
+}
+.well2{
+	opacity: 0.9;
+	background: transparent;
+	border: 1px solid transparent;
+	width: 90%;
+	margin-left: 5%;
+	margin-top: 15%;
+	padding: 20px;
+}
+.welcomeNote{
+	color: #fff;
+	font-size: 65px;
+	text-align: center;
+}
+.introNote{
+	color: #fff;
+	text-align: center;
+	font-weight: lighter;
+}
+.btnIntro{
+	width: 100%;
+	border-radius: 0px;
+	height: 60px;
+	font-size: 30px;
+	background-color: #f0ad4e;
+	border-color: #f0ad4e; 
+}
+.appList{
+	width: 100%;
+	height: 50px;
+	border-radius: 0px;
+}
+
+.todoPage, .quadraticPage{
+	margin-top: 5%;
+}
+.titleInput{
+	width: 85%;
+	height: 40px;
+}
+.addBtn{
+	width: 10%;
+	height: 40px;
+	border-radius: 0px;
+}
+.todo-true{
+	text-decoration: line-through;
+	color: grey;
+}
+
+.quaForm input{
+	width: 100%;
+	height: 40px;
+}
+.quaForm button{
+	height: 40px;
+	border-radius: 0px;
+}
+.aboutPage{
+	margin-top: 5%;
+}
+.aboutIntro{
+	text-align: center;
+}
+#profilePic, #profilePic2{
+  height: 100px;
+  width: 100px;
+}
+.profile-detail{
+  float: left;
+  width: 30%;
+}
+.div-title4{
+  color: #fff;
+  text-align: center;
+}
+.contact-form label{
+  color: #fff;
+}
+.contact-form input{
+  width: 95%;
+  height: 40px;
+}
+.contact-form textarea{
+  width: 95%;
+  height: 200px;
+}
+.contact-form button{
+  float: right;
+  margin-right: 5%;
+  color:#111;
+}
+.title4{
+  color: #232323;
+}
+.list-of-services li{
+  list-style-type: none;
+  font-size: 16px;
+  color: #232323;
+  text-align: left;
+  margin-bottom: 1em;
+}
+iframe{
+  width: 100%;
+  height: 250px;
+}
