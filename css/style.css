@@ -13,7 +13,7 @@ body{
 	font-style: italic;
 	margin-bottom: -2px;
 }
-.navbar{
+.navbar, .dropdown-menu{
 	background: #232323;
 	border: 1px solid transparent;
 }
@@ -27,8 +27,7 @@ body{
 	background-size: cover;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	padding: 30px;
-	padding-bottom: 70px;
+	padding: 30px 30px 200px 30px;
 }
 .well1{
 	opacity: 0.9;
@@ -48,7 +47,7 @@ body{
 }
 .welcomeNote{
 	color: #fff;
-	font-size: 65px;
+	font-size: 200%;
 	text-align: center;
 }
 .introNote{
@@ -70,23 +69,32 @@ body{
 	border-radius: 0px;
 }
 
-.todoPage, .quadraticPage{
-	margin-top: 5%;
+.todoPage, .quadraticPage,.timerPage{
+	margin-top: 8%;
 }
 .titleInput{
 	width: 85%;
 	height: 40px;
 }
 .addBtn{
-	width: 10%;
+	width: 8%;
 	height: 40px;
+	margin-top: -3px;
 	border-radius: 0px;
+	text-align: center;
 }
 .todo-true{
 	text-decoration: line-through;
 	color: grey;
 }
-
+.taskDiv{
+	height: calc(100vh / 2);
+	overflow-y: auto;
+}
+.historyDiv{
+	height: calc(100vh / 2.4);
+	overflow-y: auto;
+}
 .quaForm input{
 	width: 100%;
 	height: 40px;
@@ -142,4 +150,14 @@ body{
 iframe{
   width: 100%;
   height: 250px;
+}
+
+.timerBtn{
+	width: 100%;
+	border-radius: 0px;
+	height: 40px;
+	padding-bottom: 5px;
+}
+.historyTitle{
+	text-align: center;
 }

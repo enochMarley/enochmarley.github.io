@@ -17,6 +17,9 @@ app.config(function($routeProvider){
   }).when('/quadratic',{
     templateUrl: 'includes/pages/quadratic.html',
     controller: 'quaCtrl'
+  }).when('/timer',{
+    templateUrl: 'includes/pages/timer.html',
+    controller: 'timerCtrl'
   });
 });
 
@@ -46,13 +49,16 @@ app.controller('todoCtrl',function($scope){
     this.checked = false;
     $scope.tasks.splice(this.$index,1);
     $scope.check --;
+    if ($scope.check <= 0) {
+      $scope.check = 0;
+    }
     $("#alert"+this.$index).addClass("alert-info").removeClass("alert-danger");
   }
 
 });
 
 
-//the controller taking care of the todo list application.
+//the controller taking care of the quadratic calculator application.
 app.controller('quaCtrl',function($scope){
   $scope.calcQua = function(){
 
@@ -83,4 +89,64 @@ app.controller('quaCtrl',function($scope){
 
    
   }
+});
+
+//the controller taking care of the quadratic calculator application.
+app.controller('timerCtrl', function($scope,$interval){
+  $scope.archives = [];
+  $scope.summary = 0;
+  $scope.hours = 0;
+  $scope.minutes = 0;
+  $scope.seconds = 0;
+  var interval = 0;
+  var paused = false;
+  $(".stop").prop("disabled",true);
+  $(".reset").prop("disabled",true);
+  $(".historyTitle").hide();
+
+  $scope.startTimer = function(){
+
+    $(".start").prop("disabled",true).html("Start");
+    $(".stop").prop("disabled",false).html("Stop");
+    $(".reset").prop("disabled",false);
+
+    interval = $interval(function(){
+      if ($scope.seconds < 10) {
+        $scope.seconds = "0"+$scope.seconds;
+      }
+      $scope.seconds ++;
+      if ($scope.seconds < 10) {
+        $scope.seconds = "0"+$scope.seconds;
+      }
+      if ($scope.seconds == 60) {
+        $scope.minutes ++;
+        $scope.seconds = 0;
+        startTimer();
+      }
+    },1000);
+  }
+  
+  $scope.pauseTimer = function(){
+
+    $interval.cancel(interval);
+    $(".stop").prop("disabled",true).html("Stopped");
+    $(".start").prop("disabled",false).html("Continue");
+  }
+
+  $scope.stopTimer = function(){
+    $scope.day = new Date().toDateString();
+    $scope.theTime = new Date().toLocaleTimeString();
+    $scope.summary = $scope.hours + " hour(s) : " +  $scope.minutes + " minute(s) : " + $scope.seconds + " second(s). On " 
+      + $scope.day + ". " + $scope.theTime;
+    $scope.archives.push($scope.summary);
+    $interval.cancel(interval);
+    $scope.hours = 0;
+    $scope.minutes = 0;
+    $scope.seconds = 0;
+    $(".historyTitle").show();
+    $(".start").prop("disabled",false).html("Start");
+    $(".stop").prop("disabled",true).html("Stop");
+    $(".reset").prop("disabled",true);
+  }
+
 });
