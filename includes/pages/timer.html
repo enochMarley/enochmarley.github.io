@@ -1,0 +1,33 @@
+<div class="row timerPage">
+	<div class="col-md-3"></div>
+	<div class="col-md-6 col-xs-12">
+		<div class="well">
+			<p>This is a real-time responsive self timer. Toggle the control buttons to use the application</p>
+			<div class="row">
+				<div class="col-md-4 col-xs-4"><h1>{{hours}}</h1> hour(s)</div>
+				<div class="col-md-4 col-xs-4"><h1>{{minutes}}</h1> minutes(s)</div>
+				<div class="col-md-4 col-xs-4"><h1>{{seconds}}</h1> second(s)</div>
+			</div><hr>
+			<div class="row">
+				<div class="col-md-4 col-xs-4">
+					<button ng-click="startTimer()" type="button" class="btn btn-success timerBtn start">Start</button>
+				</div>
+				<div class="col-md-4 col-xs-4">
+					<button  ng-click="pauseTimer()" type="button" class="btn btn-primary timerBtn stop">Stop</button>
+				</div>
+				<div class="col-md-4 col-xs-4">
+					<button  ng-click="stopTimer()" type="button" class="btn btn-danger timerBtn reset">Reset</button>
+				</div>
+			</div>
+		</div>
+		<div class="row historyDiv">
+			<div><h4 class="historyTitle">History</h4></div>
+			<div class="col-xs-12 col-md-12">
+				<ul ng-repeat="task in archives track by $index" class="archiveList">
+					<li>{{task}}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3"></div>
+</div>
