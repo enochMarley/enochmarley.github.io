@@ -9,10 +9,21 @@
 	</div>
 	<div class="col-md-4 col-xs-12">
 		<div class="well2">
-			<button type="button" class="btn btn-warning btnIntro">OUR APPS</button><br><br><br>
-			<a href="#todo"><button type="button" class="btn btn-primary appList">Todo List</button></a><br><br>
-			<a href="#quadratic"><button type="button" class="btn btn-primary appList">Quadratic Calculator</button></a><br><br>
-			<a href="#timer"><button type="button" class="btn btn-primary appList">Timer</button></a>
+			<button type="button" class="btn btn-warning btnIntro" data-toggle="tooltip" data-placement="left" title="Choose An Application From The Awesome List Below">OUR APPS</button><br><br><br>
+			<a href="#todo" data-toggle="tooltip" data-placement="left" title="Plan Your Day With Our Real Time Responsive Todo List Application">
+				<button type="button" class="btn btn-primary appList">Todo List</button>
+			</a><br><br>
+			<a href="#quadratic" data-toggle="tooltip" data-placement="left" title="Calculate The Root Values Of A Quadratic Function">
+				<button type="button" class="btn btn-primary appList">Quadratic Calculator</button>
+			</a><br><br>
+			<a href="#timer" data-toggle="tooltip" data-placement="left" title="Calculate The Time You Spent To Finish A Task.">
+				<button type="button" class="btn btn-primary appList">Timer</button>
+			</a>
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	$(function(){
+		$('[data-toggle="tooltip"]').tooltip();
+	});
+</script>
