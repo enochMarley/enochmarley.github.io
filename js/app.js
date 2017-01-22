@@ -21,6 +21,9 @@ app.config(function($routeProvider){
   }).when('/timer',{
     templateUrl: 'includes/pages/timer.html',
     controller: 'timerCtrl'
+  }).when('/gcd',{
+    templateUrl: 'includes/pages/gcd.html',
+    controller: 'gcdCtrl'
   });
 });
 
@@ -162,4 +165,35 @@ app.controller('timerCtrl', function($scope,$interval){
     $(".reset").prop("disabled",true);
   }
 
-})
+});
+
+app.controller('gcdCtrl', function($scope){
+
+  /*var bigNumber = 0;
+  var smallNumber = 0;
+  var remainder = 0;
+  $scope.gcd = 0;*/
+
+  $scope.calcGCD = function(firstNumber, secondNumber){
+
+    if (firstNumber > secondNumber) {
+      var bigNumber = firstNumber;
+      var smallNumber = secondNumber;
+    } else if (secondNumber > firstNumber){
+      bigNumber = secondNumber;
+      smallNumber = firstNumber;
+    }
+
+    var remainder = bigNumber % smallNumber;
+
+    if (remainder == 0) {
+      $scope.gcd = "The GCD of " + $scope.firstValue + " and " + $scope.secondValue + " is " + smallNumber;
+    } else {
+      bigNumber = smallNumber;
+      smallNumber = remainder;
+      this.calcGCD(bigNumber, smallNumber);
+    }
+
+  }
+
+});

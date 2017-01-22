@@ -1,0 +1,24 @@
+<div class="row quadraticPage">
+	<div class="col-md-2"></div>
+	<div class="col-md-8 col-xs-12">
+		<div class="well">
+			<p>
+				The Greatest Common Divisor (GCD) Of Two Integers,If At Least One Of Them Is Not Zero, Is The Largest Positive Integer That Is A Divisor Of Both Numbers.For Example, The GCD Of <b>8</b> and <b>12</b> Is <b>4</b>. Enter Two Numbers To Find Their GCD.</p><br>
+			<form ng-submit="calcGCD(firstValue,secondValue)" class="quaForm">
+				<div class="row">
+					<div class="col-md-4 col-xs-12">
+						<input type="number" ng-model="firstValue" placeholder="First Number" min="1" required>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<input type="number" ng-model="secondValue" placeholder="Second Number" min="1" required>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<button type="submit" class="btn btn-primary">Find GCD</button>
+					</div>
+				</div>
+			</form>
+			<h3>{{gcd}}</h3>
+		</div>
+	</div>
+	<div class="col-md-2"></div>
+</div>
