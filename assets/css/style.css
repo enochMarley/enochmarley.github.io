@@ -1,0 +1,153 @@
+@import url('gotham.css');
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: #303633;
+}
+
+* {
+    font-family: 'Gotham', sans-serif;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.custom-navbar {
+    background: transparent;
+    transition: all 0.5s ease-in-out;
+    background: inherit;
+}
+
+.navbar-brand {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.nav-link {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.navbar-toggler {
+    color: #fff !important;
+    border: 1px solid transparent !important;
+}
+
+.start-button {
+    display: none;
+}
+
+#intro {
+    color: #f7f7f7;
+}
+
+.scroll-navbar {
+    background: #111;
+}
+
+
+.intro-div {
+    height: 100vh;
+    width: 100%;
+    background: #303633;
+}
+
+.intro-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 30vh 0;
+}
+
+.intro-profile-pic {
+    height: 200px;
+    width: 200px;
+    margin-left: 18%;
+    border: 1px solid #f7f7f7;
+    margin-bottom: 20px;
+}
+
+.div-header {
+    color: #f7f7f7;
+}
+
+.services-div {
+    padding: 10vh 0 0 0;
+}
+
+.services-parallax-div {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.portfolio-div {
+    padding: 15vh 30px 15vh 30px;
+    color: #fff;
+}
+
+.portfolio-row section {
+    margin-bottom: 20px;
+}
+
+.portfolio-div a, .portfolio-div a:hover {
+    color: #c0c0c0;
+}
+
+.portfolio-div li {
+    list-style-type: square;
+}
+
+
+.about-div {
+    padding: 15vh 5px 45vh 5px;
+    color: #f7f7f7;
+}
+
+.contact-div {
+    padding: 20vh 5px;
+    color: #fff;
+}
+
+.contact-div li {
+    list-style-type: none;
+}
+
+.contact-div a{
+    font-size: 13px;
+}
+
+.contact-div form input, .contact-div form textarea {
+    background: inherit;
+    color: #c0c0c0;
+    border: 1px solid #c0c0c0;
+    font-size: 13px;
+}
+
+.social-media-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media-div li {
+    font-size: 20px;
+    margin: 5px;
+}
